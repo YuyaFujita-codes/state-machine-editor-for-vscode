@@ -1,0 +1,80 @@
+{
+	"name": "state-machine-editor",
+	"displayName": "State Machine Editor",
+	"description": "A custom editor for .smjson state machine files.",
+	"version": "0.0.1",
+	"publisher": "yuya-fujita",
+	"private": true,
+	"license": "GPL-3.0-only",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Microsoft/vscode-extension-samples"
+	},
+	"engines": {
+		"vscode": "^1.100.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"languages": [
+			{
+				"id": "smjson",
+				"aliases": [
+					"State Machine",
+					"smjson"
+				],
+				"extensions": [
+					".smjson"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"customEditors": [
+			{
+				"viewType": "stateMachineEditor.smjsonEditor",
+				"displayName": "State Machine Editor",
+				"selector": [
+					{
+						"filenamePattern": "*.smjson"
+					}
+				],
+				"priority": "default"
+			}
+		],
+		"commands": [
+			{
+				"command": "stateMachineEditor.toggleEditor",
+				"title": "SMJSON: Toggle Editor View"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "stateMachineEditor.toggleEditor",
+				"key": "ctrl+shift+t",
+				"mac": "cmd+shift+t",
+				"when": "resourceExtname == .smjson"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint",
+		"watch": "tsc -w -p ./"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.13.0",
+		"@stylistic/eslint-plugin": "^2.9.0",
+		"@types/node": "^22",
+		"@types/vscode": "^1.100.0",
+		"@types/vscode-webview": "^1.57.0",
+		"eslint": "^9.13.0",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.39.0"
+	}
+}
