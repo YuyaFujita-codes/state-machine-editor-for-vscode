@@ -3,7 +3,7 @@
 	"displayName": "State Machine Editor",
 	"description": "A custom editor for .smjson state machine files.",
 	"version": "0.0.1",
-	"publisher": "yuya-fujita",
+	"publisher": "YuyaFujita",
 	"private": true,
 	"license": "GPL-3.0-only",
 	"repository": {
