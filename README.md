@@ -1,7 +1,7 @@
 # **State Machine Editor**
 
 An intuitive state machine (state transition diagram) editor. 
-It generates C skeleton code from the created diagrams in real-time, making it ideal for embedded system projects and more.
+It generates skeleton code from the created diagrams in real-time, making it ideal for embedded system projects and more.
 
 ## **🚀 Getting Started**
 
@@ -22,7 +22,14 @@ For those who prefer editing raw JSON or need to perform quick text-based refact
 
 * **Toggle View**: Press `Ctrl + Shift + T` (or `Cmd + Shift + T` on macOS) to switch between the **Visual Design View** and the standard **VS Code Text Editor**.
 
-### **3. Shortcut Keys**
+### **3. Extensible Code Generation**
+
+The editor features a powerful, decoupled code generation engine driven by JavaScript. By processing the underlying `.smjson` model through custom JS generator scripts, the editor can produce high-quality source code for **virtually any programming language**.
+
+* **Universal Logic**: A central logic engine cleanses and resolves complex behaviors like Choice nodes and hierarchical state nesting into a flat design context.
+* **Language Agnostic**: Since generators are written in JS, you can easily map the state machine logic to C (switch-case), Python (class/if-elif), JavaScript (event loops), or even documentation formats.
+
+### **4. Shortcut Keys**
 
 Supports the following shortcuts for efficient editing:
 
@@ -40,8 +47,8 @@ Supports the following shortcuts for efficient editing:
 | **Delete / Backspace** | Delete selected elements |
 | **Escape** | Deselect / Close menu / Cancel transition creation |
 
-### **4. Advanced Features**
+### **5. Advanced Features**
 
 * **Internal Actions**: Write Entry, Do, and Exit action codes for each state.
-* **Code Generation**: Instantly preview and copy C switch-case and structure-based code based on state transitions in the Code View.
+* **Instant Preview**: Preview and copy generated code immediately as you modify the diagram.
 * **History Management**: Automatically tracks state machine changes for Undo/Redo support.
