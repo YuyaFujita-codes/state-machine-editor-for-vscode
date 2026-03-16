@@ -2,7 +2,7 @@
 	"name": "state-machine-editor",
 	"displayName": "State Machine Editor",
 	"description": "A custom editor for .smjson state machine files.",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"publisher": "YuyaFujita",
 	"private": true,
 	"license": "GPL-3.0-only",
