@@ -8,6 +8,7 @@ tsconfig.lsif.json
 *.lsif
 *.db
 *.tsbuildinfo
-
+*.vsix
+package-lock.json
 # Don't check in API files. These should be pulled in during install
 vscode*.d.ts
